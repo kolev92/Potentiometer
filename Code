@@ -1,0 +1,14 @@
+int led=11;
+int potPin=A5;
+
+void setup()
+{
+pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  int potVal=analogRead(potPin);
+  potVal=map(potVal,0,1023,0,255);
+  analogWrite(led, potVal);
+}
