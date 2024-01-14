@@ -1,0 +1,18 @@
+int led=11;
+int potPin=A5;
+
+void setup()
+{
+pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  int potVal=analogRead(potPin);
+//Регулиране на скоростта на мигане на светодиода с потенциометър от 0.2 до 1.5 секунди.
+  potVal=map(potVal,0,1023,200,1500);
+  digitalWrite(led, HIGH);
+  delay(potVa);
+  digitalWrite(led, LOW);
+  delay(potVal);
+}
